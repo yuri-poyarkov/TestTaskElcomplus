@@ -4,9 +4,33 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TestTaskElcomplus"
+        xmlns:vm="clr-namespace:TestTaskElcomplus.ViewModels"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="{Binding Title}" 
+        Height="450" Width="800">
+    <Window.DataContext>
+        <vm:MainWindowViewModel/>
+    </Window.DataContext>
+   
+    <DockPanel>
+        <Menu DockPanel.Dock = "Top">
+            <MenuItem Header = "Файл">
+                <MenuItem Header = "Выход" Command="{Binding CloseAppCommand}"></MenuItem>
+            </MenuItem>
+            <MenuItem Header = "О программе">
+            </MenuItem>
+        </Menu>
+        <TabControl>
+            <TabItem Header="Config.xml">
+                <Grid>
 
-    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Tree.xml">
+                <Grid>
+
+                </Grid>
+            </TabItem>
+        </TabControl>
+    </DockPanel>
 </Window>

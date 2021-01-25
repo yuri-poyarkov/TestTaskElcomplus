@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace TestTaskElcomplus.ViewModels
+namespace TestTaskElcomplus.ViewModels.Base
 {
     internal abstract class ViewModel : INotifyPropertyChanged
     {
